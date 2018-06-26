@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Game</title>
+</head>
+
+<body>
+    <main>
+        <section class="opponent">
+            <div class="opponent-info">
+                <h2 class="opponent-name">Opponent</h2>
+                <h5 class="opponent-hp"></h5>
+            </div>
+            <div class="opponent-main">
+                <img class="gate-left" src="./images/gate-left.jpg" alt="Gate">
+            </div>
+        </section>
+        <section class="hero">
+            <div class="hero-info">
+                <h2>Hero</h2>
+                <h5 class="hero-hp"></h5>
+            </div>
+            <div class="hero-main">
+                <img class="gate-right" src="./images/gate-right.jpg" alt="Gate" width="100px" height="100px">
+                <img class="ball ball-right" src="./images/ball.png" alt="Ball">
+                <img class="person-image person-image-right" src="./images/hero.png">             
+            </div>
+            <div class="hero-controllers">
+                <button class="waves-effect waves-light btn modal-trigger btn-math" href="#math">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </button>
+                <button class="waves-effect waves-light btn modal-trigger btn-translate" href="#translate">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </button>
+                <button class="waves-effect waves-light btn modal-trigger btn-organize" href="#organize-letters">
+                    <i class="fa fa-sort" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
+        <h2 class="goal-modal" hidden>GOL!!!</h2>
+        <h2 class="fail-modal" hidden>FAIL!</h2>
+        <h2 class="final-modal" hidden></h2>
+        <button class="waves-effect waves-light btn btn-new-game" disabled>New Game</button>
+    </main>
+    <div id="math" class="modal">
+        <div class="modal-content">
+            <h4>What is the result of the equation?</h4>
+            <h2 class="equation">A bunch of text</h2>
+            <input class="input-math" type="number">
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat modal-close-math">OK</a>
+        </div>
+    </div>
+    <div id="translate" class="modal">
+        <div class="modal-content">
+            <h4>What is the result of the equation?</h4>
+            <h2 class="translate">A bunch of text</h2>
+            <input class="input-translate" type="text">
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat modal-close-translate">OK</a>
+        </div>
+    </div>
+    <div id="organize-letters" class="modal">
+        <div class="modal-content">
+            <h4>Organize letters of the word</h4>
+            <h2 id="sortable"></h2>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat modal-close-organize">OK</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

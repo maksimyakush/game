@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: grid;
+    height: 100vh;
+}
+
+main {
+    position: relative;
+    display: grid;
+    width: 1200px;
+    height: 70vh;
+    align-self: center;
+    justify-self: center;
+    border: green 1px solid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button {
+    cursor: pointer;
+    width: 100px;
+}
+
+.btn-new-game {
+    position: absolute;
+    bottom: 3%;
+    left: 15%;
+    width: 200px;
+}
+
+section.hero {
+    display: grid;
+    grid-template-rows: 1fr 100px;
+    border-left: dotted 3px green;
+}
+
+.hero-controllers {
+    padding: 16px;
+    justify-self: end;
+    align-self: end;
+}
+
+.gate-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 174px;
+}
+
+.gate-right {
+    position: absolute;
+    width: 200px;
+    height: 174px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: transform 3s;   
+    z-index: 1;
+}
+
+.ball-right {
+    top: 50%;
+    left: 55%;
+}
+
+.ball-left {
+    top: 50%;
+    left: 40%;   
+}
+
+.person-image-left__body {
+    width: 90px;
+    height: 90px; 
+    position: absolute;  
+    top: 45%;
+    left: 26%;
+}
+
+.person-image-left__left-arm {
+    width: 90px;
+    height: 90px; 
+    position: absolute;  
+    top: 38%;
+    left: 19%;
+}
+
+.person-image-left__right-arm {
+    width: 90px;
+    height: 90px; 
+    position: absolute;  
+    top: 38%;
+    left: 33%;
+}
+
+.person-image-left__face {
+    width: 90px;
+    height: 90px; 
+    position: absolute;  
+    top: 33%;
+    left: 25%;
+}
+
+.person-image-left__legs {
+    position: absolute;  
+    top: 56%;
+    left: 20%;
+}
+
+.person-image-right {
+    position: absolute;  
+    top: 33%;
+    right: 18%;
+}
+
+.hero-goal {
+    transform: translate(-550px, -50px);
+}
+
+.hero-fail {
+    transform: translate(-450px, -200px);
+}
+
+.opponent-goal {
+    transform: translate(550px, -50px);
+}
+
+.modal {
+    width: 700px !important;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+span {
+    cursor: pointer;
+    border: green 1px solid;
+    padding: 0 10px;
+    margin: 0 10px; 
+}
+
+.goal-modal, .fail-modal, .final-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 1rem;
+    background: red;
+    font-style: bold;
+    transform: translate(-50%, -50%);
+}
+
